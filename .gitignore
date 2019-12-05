@@ -1,0 +1,28 @@
+*.class
+
+ # Package Files #
+*.jar
+*.war
+*.ear
+
+ ### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+ ### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+ ### OS X ###
+.DS_Store
+
+ #build
+target 
+
+src/main/resources/application-local.yaml
