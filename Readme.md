@@ -1,4 +1,4 @@
-****Maven archetype for restful sprin-boot application with jpa****
+****Maven archetype for restful spring-boot application with jpa****
 
 **To install**
 
