@@ -24,17 +24,17 @@ public class ItemResource {
 	private ItemJpaRepository itemRepository;
 
 	@GetMapping("/groups/{group}/items")
-	public List<Item> getAllCourses(@PathVariable String group) {
+	public List<Item> getAllItems(@PathVariable String group) {
 		return itemRepository.findAll();
 	}
 
 	@GetMapping("/groups/{group}/items/{id}")
-	public Item getCourse(@PathVariable String group, @PathVariable long id) {
+	public Item getItem(@PathVariable String group, @PathVariable long id) {
 		return itemRepository.findById(id).orElseThrow(() -> new RuntimeException("Item Not Found with id " + id));
 	}
 
 	@DeleteMapping("/groups/{group}/items/{id}")
-	public ResponseEntity<Void> deleteCourse(@PathVariable String group, @PathVariable long id) {
+	public ResponseEntity<Void> deleteItem(@PathVariable String group, @PathVariable long id) {
 
 		itemRepository.deleteById(id);
 
@@ -42,7 +42,7 @@ public class ItemResource {
 	}
 
 	@PutMapping("/groups/{group}/items/{id}")
-	public ResponseEntity<Item> updateCourse(@PathVariable Integer group, @PathVariable long id,
+	public ResponseEntity<Item> updateItem(@PathVariable Integer group, @PathVariable long id,
                                              @RequestBody Item item) {
 
 		item.setCgroup(group);
@@ -53,7 +53,7 @@ public class ItemResource {
 	}
 
 	@PostMapping("/groups/{group}/items")
-	public ResponseEntity<Void> createCourse(@PathVariable Integer group, @RequestBody Item item) {
+	public ResponseEntity<Void> createItem(@PathVariable Integer group, @RequestBody Item item) {
 		
 		item.setCgroup(group);
 
