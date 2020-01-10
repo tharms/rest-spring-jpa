@@ -1,5 +1,7 @@
 ****Maven archetype for restful spring-boot application with jpa****
 
+This archetype generates a simple model along with it's REST resources consisting of simple `Item`s grouped by `Group`s that are stored in-memory. 
+
 **To install**
 
 - download repository
